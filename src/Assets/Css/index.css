@@ -193,12 +193,18 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-left:8%;
 }
 
 .images1 img {
-    width: 30%;
-    height: 70%;
+    width: 70%;
+    height: 400px;
     object-fit: cover;
+  
+}
+img:hover{
+  cursor:pointer;
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
 }
 
 .home_footer {

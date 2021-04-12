@@ -9,16 +9,18 @@ import {IconContext} from "react-icons";
 import{FaFacebook, FaPhoneAlt} from "react-icons/fa";
 import { GrMapLocation } from "react-icons/gr";
 import {GiMailbox } from "react-icons/gi";
-
-
+//getting ant design card
+import { Card } from 'antd';
 //
 //
 import React, { Component } from "react";
 //export the Home section so as it can be used in the index.js`
-
+ 
 export default function Home() {
-  return (
+ 
 
+const { Meta } = Card;
+  return (
     <>
    
         <section className="navbar">
@@ -54,9 +56,30 @@ export default function Home() {
       </section>
       <section className="home_third">
         <div className="images1 ">
-          <img src={img} alt="x" />
-          <img src={img1} alt="r" />
-          <img src={img2} alt="" />
+        <Card
+            hoverable
+            style={{ width: 500 }}
+            cover={ <img src={img} alt="x" />}
+          >
+            <Meta title="Europe Street beat" description="www.instagram.com" />
+        </Card>
+         <Card
+            hoverable
+            style={{ width: 500 }}
+            cover={ <img src={img1} alt="r" />}
+          
+          >
+              <Meta className="title_meta" title="Europe Street beat" description="www.instagram.com" />
+        </Card>
+        <Card
+            hoverable
+            style={{ width: 500 }}
+            cover={ <img src={img2} alt="" /> }
+          >
+            <Meta title="Europe Street beat" description="www.instagram.com" />
+        </Card>
+         
+         
         </div>
       </section>
       <section className="home_footer">
