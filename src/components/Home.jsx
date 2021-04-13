@@ -10,16 +10,29 @@ import{FaFacebook, FaPhoneAlt} from "react-icons/fa";
 import { GrMapLocation } from "react-icons/gr";
 import {GiMailbox } from "react-icons/gi";
 //getting ant design card
+import 'antd/dist/antd.css';
 import { Card } from 'antd';
+//
+//To help in creating a previwe on the image
+import {Image} from 'antd';
+import { Carousel } from 'antd';
+
+
 //
 //
 import React, { Component } from "react";
 //export the Home section so as it can be used in the index.js`
  
 export default function Home() {
- 
 
+//
+//creating a card to hold the image
 const { Meta } = Card;
+const contentStyle = {
+  height: '260px',
+  width:'400px',
+  alignItems:'center'
+};
   return (
     <>
    
@@ -43,11 +56,16 @@ const { Meta } = Card;
             <u>Lands On Offer</u>
           </h1>
         </div>
+        
         <div className="images2">
-          <img src={img} alt="w" />
-          <img src={img1} alt="x" />
-          <img src={img2} alt="r" />
+        <Carousel autoplay>
+          <div> <img style={contentStyle} src={img} alt="w" /></div>
+          <div> <img style={contentStyle} src={img1} alt="w" /></div>
+          <div> <img style={contentStyle} src={img2} alt="w" /></div>
+        
+          </Carousel>
         </div>
+      
       </section>
       <section className="home_second">
         <div className="btn from-left ">Property</div>
@@ -58,25 +76,25 @@ const { Meta } = Card;
         <div className="images1 ">
         <Card
             hoverable
-            style={{ width: 500 }}
-            cover={ <img src={img} alt="x" />}
+            style={{ width: 500, backgroundColor: "#f4f5db", justifyContent:"space-between" }}
+            cover={ <Image src={img} alt="x" />}
           >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
+            <Meta style={{color: "#487e95", textAlign:"center"}} title="Europe Street beat" description="www.instagram.com" />
         </Card>
          <Card
             hoverable
-            style={{ width: 500 }}
-            cover={ <img src={img1} alt="r" />}
+            style={{ width: 500,backgroundColor: "#f4f5db" }}
+            cover={ <Image src={img1} alt="r" />}
           
           >
-              <Meta className="title_meta" title="Europe Street beat" description="www.instagram.com" />
+              <Meta style={{color: "#487e95", textAlign:"center"}} className="title_meta" title="Europe Street beat" description="www.instagram.com" />
         </Card>
         <Card
             hoverable
-            style={{ width: 500 }}
-            cover={ <img src={img2} alt="" /> }
+            style={{ width: 500 , backgroundColor: "#f4f5db"}}
+            cover={ <Image src={img2} alt="" /> }
           >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
+            <Meta style={{color: "#487e95", textAlign:"center"}} title="Europe Street beat" description="www.instagram.com" />
         </Card>
          
          
